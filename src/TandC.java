@@ -12,7 +12,8 @@ public class TandC extends Base{
     public static void testTandC() throws MalformedURLException, InterruptedException {
 
         //Getting the capabilities in the Android Driver
-        AndroidDriver<AndroidElement> driver = capabilities("com.pb.framework.ui.activity.TermsActivity");
+        AndroidDriver<AndroidElement> driver = capabilities
+                ("com.pb.framework.ui.activity.TermsActivity");
 
         //Waiting for the application to load completely
         Thread.sleep(7000);

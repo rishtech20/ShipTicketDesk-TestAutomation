@@ -9,6 +9,7 @@ public class Main {
         //creating objects for each class, i.e. each functionality
         TandC tnc = new TandC();
         WalkthroughLogin wtln = new WalkthroughLogin();
+        Dashboard dshb = new Dashboard();
 
         //Accepting the terms and conditions - run it only once - fresh install
         try {
@@ -30,6 +31,17 @@ public class Main {
         }
         catch(InterruptedException w){
             System.out.println("Failed at walkthrough");
+        }
+
+        //Testing the dashboard
+        try {
+            dshb.dashboard();
+        }
+        catch(MalformedURLException m){
+            System.out.println("Failed at dashboard");
+        }
+        catch(InterruptedException w){
+            System.out.println("Failed at dashboard");
         }
     }
 }
