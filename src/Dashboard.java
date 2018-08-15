@@ -2,10 +2,9 @@ package shitpticketdesk;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import java.net.MalformedURLException;
 
 public class Dashboard extends WalkthroughLogin {
-    public static void dashboard() throws MalformedURLException, InterruptedException {
+    public static void dashboard() throws InterruptedException {
 
         //Inheriting the properties of the driver from the Walkthrough
         //So, the dashboard is not considered as a completely new activity
@@ -73,6 +72,51 @@ public class Dashboard extends WalkthroughLogin {
             System.out.println("Resolved Tickets not working");
         }
         driver.navigate().back();
+        Thread.sleep(2000);
+
+        //clicking on the All Tickets and checking its functionality
+        //Validating that user is in the All tickets screen and
+        //Coming back to the dashboard
+        driver.findElementById("com.pb.shipticketdesk:id/ll_view_all_ticket").click();
+        Thread.sleep(8000);
+        if (driver.findElementByAndroidUIAutomator("text(\"All Tickets\")")
+                .getText() == "All Tickets"){
+            System.out.println("All Tickets working");
+        }
+        else{
+            System.out.println("All Tickets not working");
+        }
+        driver.navigate().back();
+        Thread.sleep(2000);
+
+        //clicking on the Create and checking its functionality
+        //Validating that user is in the Create screen and
+        //Coming back to the dashboard
+        driver.findElementById("com.pb.shipticketdesk:id/ll_create_ticket").click();
+        Thread.sleep(8000);
+        if (driver.findElementByAndroidUIAutomator("text(\"Create Ticket\")")
+                .getText() == "Create Ticket"){
+            System.out.println("Create Ticket working");
+        }
+        else{
+            System.out.println("Create Ticket not working");
+        }
+        driver.navigate().back();
+        Thread.sleep(2000);
+
+        //clicking on the Switch Account and checking its functionality
+        //Validating that user is in the Create screen and
+        //Coming back to the dashboard
+        driver.findElementByAndroidUIAutomator("text(\"Switch Account\")").click();
+        Thread.sleep(8000);
+        if (driver.findElementByAndroidUIAutomator("text(\"Switch Freshdesk Account\")")
+                .getText() == "Switch Freshdesk Account"){
+            System.out.println("Switch Freshdesk Account");
+        }
+        else{
+            System.out.println("Switch Freshdesk Account");
+        }
+        driver.findElementByAndroidUIAutomator("text(\"Cancel\")").click();
         Thread.sleep(2000);
     }
 }
