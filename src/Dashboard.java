@@ -1,3 +1,4 @@
+//Author: Rishabh Madan
 package shitpticketdesk;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -8,11 +9,11 @@ public class Dashboard extends WalkthroughLogin {
 
         //Inheriting the properties of the driver from the Walkthrough
         //So, the dashboard is not considered as a completely new activity
-        //and it doesnt destroy the automation process
+        //and it doesn't destroy the automation process
         AndroidDriver<AndroidElement> driver = WalkthroughLogin.driver;
 
         //Waiting for the dashboard to load
-        Thread.sleep(8000);
+        Thread.sleep(15000);
 
         //Clicking on the Open Ticket and checking its functionality
         //Validating that application is in the open ticket screen and

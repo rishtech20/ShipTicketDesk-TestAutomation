@@ -1,3 +1,4 @@
+//Author: Rishabh Madan
 package shitpticketdesk;
 
 import io.appium.java_client.TouchAction;
@@ -16,7 +17,7 @@ public class TandC extends Base{
                 ("com.pb.framework.ui.activity.TermsActivity");
 
         //Waiting for the application to load completely
-        Thread.sleep(7000);
+        Thread.sleep(11000);
 
         //Swiping the Terms and conditions to make sure that the button is enabled
         //1.Creating a new TouchAction Object to simulate the swipe action

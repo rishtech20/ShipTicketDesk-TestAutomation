@@ -1,3 +1,4 @@
+//Author: Rishabh Madan
 package shitpticketdesk;
 
 import java.net.MalformedURLException;
@@ -10,6 +11,7 @@ public class Main {
         TandC tnc = new TandC();
         WalkthroughLogin wtln = new WalkthroughLogin();
         Dashboard dshb = new Dashboard();
+        CreateTicket crtTick = new CreateTicket();
 
         //Accepting the terms and conditions - run it only once - fresh install
         try {
@@ -37,8 +39,13 @@ public class Main {
         try {
             dshb.dashboard();
         }
-        catch(MalformedURLException m){
+        catch(InterruptedException w){
             System.out.println("Failed at dashboard");
+        }
+
+        //Testing Create Ticket Functionality
+        try {
+            crtTick.createTicket();
         }
         catch(InterruptedException w){
             System.out.println("Failed at dashboard");
