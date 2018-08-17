@@ -12,6 +12,7 @@ public class Main {
         WalkthroughLogin wtln = new WalkthroughLogin();
         Dashboard dshb = new Dashboard();
         CreateTicket crtTick = new CreateTicket();
+        TicketDetailsFunct tickDet = new TicketDetailsFunct();
 
         //Accepting the terms and conditions - run it only once - fresh install
         try {
@@ -36,7 +37,7 @@ public class Main {
         }
 
         //Testing the dashboard
-        try {
+         try {
             dshb.dashboard();
         }
         catch(InterruptedException w){
@@ -46,6 +47,14 @@ public class Main {
         //Testing Create Ticket Functionality
         try {
             crtTick.createTicket();
+        }
+        catch(InterruptedException w){
+            System.out.println("Failed at dashboard");
+        }
+
+        //Ticket Details functionality
+        try {
+            tickDet.ticketDetails();
         }
         catch(InterruptedException w){
             System.out.println("Failed at dashboard");
