@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "Shipticket Desk">
+	<test name = "Smoke Test">
+		<classes>
+			<class name = "Automation.Base" />
+			<class name = "Automation.TandCTest" />
+			<class name = "Automation.WalkthroughLoginTest" />
+			<class name = "Automation.DashboardTest" />
+			<class name = "Automation.CreateTicketTest" />
+			<class name = "Automation.TicketDetailsFunct" />
+		</classes>
+	</test>
+</suite>
